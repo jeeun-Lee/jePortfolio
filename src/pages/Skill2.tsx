@@ -17,7 +17,7 @@ function Skill({el2_1} : any){
   
     const [Skill2,setSkill] =useState([]);
     const SkillData = async() =>{
-        const response = await fetch(`https://raw.githubusercontent.com/jeeun-Lee/jePortfolio/master/portfolio-type/src/assets/skill2.json`);
+        const response = await fetch(`https://raw.githubusercontent.com/jeeun-Lee/jePortfolio/refs/heads/main/src/assets/skill2.json`);
         const json = await response.json();
         setSkill(json)
     }
