@@ -9,6 +9,7 @@ import "./Project2.css";
 interface Projectprops {
     id : number,
     project_title : string,
+    date : string,
     type : string,
     detail : string,
     percent : string,
@@ -26,7 +27,12 @@ const Project_title = styled.h1`
         margin-top: 5px;
     }
 `
-
+const Project_title_date = styled.span`
+    display: block;
+    color: #515151;
+    font-size: 14px;
+    font-weight: 300;
+`
 
 
 function Project2({el3} : any) {
@@ -99,7 +105,7 @@ function Project2({el3} : any) {
                                 <img src={process.env.PUBLIC_URL + `/images/pr${item.id}.png`} alt={item.project_title} />
                             </div>
                             <div className="txt-wrap">
-                                <h4 className="project_title">{item.project_title}</h4>
+                                <h4 className="project_title">{item.project_title} <Project_title_date className="date">{item.date}</Project_title_date></h4>
                                 <div className="d-flex">    
                                     <p className="txt_type">{item.type}</p>
                                     <p className="txt_percent">참여도<span>(프론트앤드/퍼블리싱)</span> {item.percent}</p>
